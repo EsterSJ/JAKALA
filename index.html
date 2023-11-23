@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <title>Prueba JAKALA</title>
+</head>
+<body>
+    <h1>WELCOME TO ...</h1>
+    <img src="img/jakala.png" alt="">
+
+    <div id="popup" class="popup">
+        <span id="close" class="close">&times;</span>
+        <form id="formulario">
+            <h3>Tu oferta te está esperando</h3>
+            <input type="text" id="name" name="name" placeholder="Nombre*" required>
+            <input type="phone" id="phone" name="phone" placeholder="Teléfono*" required>
+            <div class="checkbox-group">
+                <input type="checkbox" id="politicaPrivacidad" name="politicaPrivacidad" required>
+                <label for="notificacionesComerciales">Politica de Privacidad*</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="notificacionesComerciales" name="notificacionesComerciales" required>
+                <label for="notificacionesComerciales">Acepto recibir notificaciones comerciales*</label>
+            </div>
+
+            <button type="submit">Te llamamos gratis</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
