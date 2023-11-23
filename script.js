@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
     
     var ultimoCierre = localStorage.getItem('ultimoCierre');
     //comprobamos si el formulado ya ha sido enviado
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //comprobacion de que hay un último cierre y ha ocurrido hace menos de una semana
     //si esto se cumple no se muestra el popup
     //sino (ha pasado más de una semana o no ha habido ningún cierre del popup) se muestra
-    if (ultimoCierre != null && semana && !enviado){
+    if (ultimoCierre == null || (semana && !enviado)){
         setTimeout(function () {
             document.getElementById('popup').style.display = 'block';
         }, 500);
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     var formulario = document.getElementById('formulario');
-    var telefono = document.getElementById('phone');
+    var telefono = document.getElementById('tel');
 
     formulario.addEventListener('submit', function (event){
         event.preventDefault();
@@ -56,5 +56,9 @@ document.addEventListener('DOMContentLoaded', function () {
             // Si el formulario ya se ha enviado, bloquear permanentemente
             // Esto dependerá de la implementación específica de la herramienta de test A/B
         // }
+
+        console.log("ultimoCierre:", ultimoCierre);
+        console.log("enviado:", enviado);
+        console.log("semana:", semana);        
 });
 
